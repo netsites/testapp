@@ -1,0 +1,39 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ArtArq Web Api",
+		"_postman_id": "fc706c15-3655-5fb1-5b57-58afd703d217",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:60615/api/empleados",
+			"request": {
+				"url": "http://localhost:60615/api/areas",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:60615/api/empleados",
+			"request": {
+				"url": "http://localhost:60615/api/areas",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

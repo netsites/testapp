@@ -17,9 +17,9 @@ namespace WebApi.Controllers
         private WebApiContext db = new WebApiContext();
 
         // GET: api/Areas
-        public IQueryable<Area> GetAreas()
+        public IEnumerable<Area> GetAreas()
         {
-            return db.Areas;
+            return db.Areas.ToList();
         }
 
         // GET: api/Areas/5

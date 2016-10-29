@@ -1,0 +1,58 @@
+﻿<h2>Client</h2>
+
+<label>Nombre Area</label>
+<input type="text" id="txtNombreArea" /><input type="button" id="btnAdd" value="Agregar Area" />
+
+
+<div id="grid"></div>
+
+
+
+@section scripts{
+    
+    @Scripts.Render("~/Scripts/Client/clientApp.js");    
+}
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="modal" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <label>Nombre Area</label>
+            <input type="text" id="txtEditNombreArea" /><input type="button" id="btnEdit" value="Editar Area" />
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="deleteModal" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <h3>¿En verdad desea borrar el Area?</h3>
+            <p>
+                <input type="button" id="btnDelete" value="Aceptar" />
+                <a href="javascript:ClientApp.CancelDelete();">Cancelar</a>
+            </p>
+                
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="areasListTemplate">
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th></th>
+        </tr>
+
+        {{ for(var i=0; i < it.length; i++) { }}
+        <tr id="area-{{=it[i].Id}}">
+            <td>{{=it[i].Id}}</td>
+            <td>{{=it[i].Nombre}}</td>
+            <td><a href="javascript:ClientApp.ShowEditModal({{=it[i].Id}});">Editar</a></td>
+            <td><a href="javascript:ClientApp.ShowDeleteModal({{=it[i].Id}});">Borrar</a></td>
+        </tr>
+        {{ } }}
+
+    </table>
+
+</script>

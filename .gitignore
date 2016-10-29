@@ -1,0 +1,6 @@
+/WebApi/WebApi/bin
+/WebApi/WebApi/obj/Debug
+/WebApi/.vs/WebApi/v14/*.suo
+/WebApi/.vs/config/applicationhost.config
+/WebApi/WebApi.Entities/bin
+/WebApi/WebApi.Entities/obj
